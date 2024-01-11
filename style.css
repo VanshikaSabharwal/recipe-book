@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    animation: textLeftToRight 1s ease; 
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.container .recipe-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: bottomToTop 2s ease;
+}
+
+.container .recipe-list .recipe-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.recipe-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe-item h2 {
+    margin: 0;
+    font-size: 20px;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.recipe-item p {
+    margin: 0;
+    padding: 10px;
+    color: #777;
+}
+
+.recipe-item a {
+    background-color: #333;
+    color: #fff;
+    min-width: 150px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background 0.3 ease;
+    border-radius: 5px;
+}
+
+.recipe-item a:hover {
+    background-color: grey;
+    color: #fff;
+}
+
+button{
+    color: #fff;
+background-color: black;
+padding: 7px 5px;
+border-radius: 6px;
+cursor: pointer;
+outline: none;
+border: none;
+box-shadow: 0 12px 25px rgba(0,0,0,0.5),
+0 9px 25px rgba(37, 37, 37, 0.292),
+0 12px 25px rgba(0,0,0,0.5)
+;
+margin-top:12px;
+}
+button:hover{
+background-color:#777;
+}
+
+@keyframes textLeftToRight{
+    from{
+        margin-right: 50%;
+    }
+    to{
+        margin-right: 0%;
+    }
+
+}
+@keyframes bottomToTop{
+    from{
+        margin-top: 50%;
+    }
+    to{
+        margin-top:  0%;
+    }
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .recipe-item {
+        flex-direction: column;
+    }
+
+    .recipe-list img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .recipe-list h2 {
+        font-size: 20px;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .recipe-list p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .recipe-list a {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
